@@ -1,0 +1,96 @@
+public class StringMethodsDemo {
+    public static void main(String[] args) {
+        String str = "  Hello, Java World!  ";
+        String anotherStr = "hello, java world!";
+
+        // Length
+        System.out.println("Length: " + str.length());
+
+        // charAt
+        System.out.println("charAt(7): " + str.charAt(7));
+
+        // substring
+        System.out.println("substring(2, 7): " + str.substring(2, 7));
+
+        // contains
+        System.out.println("Contains 'Java': " + str.contains("Java"));
+
+        // equals
+        System.out.println("Equals: " + str.equals(anotherStr));
+
+        // equalsIgnoreCase
+        System.out.println("Equals Ignore Case: " + str.trim().equalsIgnoreCase(anotherStr));
+
+        // isEmpty / isBlank
+        String empty = "";
+        String blank = "   ";
+        System.out.println("isEmpty: " + empty.isEmpty());
+        System.out.println("isBlank (Java 11+): " + blank.isBlank());
+
+        // indexOf
+        System.out.println("Index of 'Java': " + str.indexOf("Java"));
+
+        // lastIndexOf
+        System.out.println("Last index of 'a': " + str.lastIndexOf("a"));
+
+        // toUpperCase / toLowerCase
+        System.out.println("To Upper: " + str.toUpperCase());
+        System.out.println("To Lower: " + str.toLowerCase());
+
+        // trim
+        System.out.println("Trimmed: '" + str.trim() + "'");
+
+        // replace
+        System.out.println("Replace 'Java' with 'Python': " + str.replace("Java", "Python"));
+
+        // replaceAll (regex)
+        System.out.println("ReplaceAll vowels: " + str.replaceAll("[aeiouAEIOU]", "*"));
+
+        // replaceFirst
+        System.out.println("ReplaceFirst 'l': " + str.replaceFirst("l", "*"));
+
+        // startsWith / endsWith
+        System.out.println("StartsWith '  He': " + str.startsWith("  He"));
+        System.out.println("EndsWith '!  ': " + str.endsWith("!  "));
+
+        // split
+        String[] words = str.trim().split(" ");
+        System.out.println("Split:");
+        for (String word : words) {
+            System.out.println(" - " + word);
+        }
+
+        // concat
+        System.out.println("Concat: " + str.concat(" Let's learn!"));
+
+        // format
+        System.out.println(String.format("Formatted number: %.2f", 45.678));
+
+        // compareTo / compareToIgnoreCase
+        System.out.println("compareTo: " + str.compareTo(anotherStr));
+        System.out.println("compareToIgnoreCase: " + str.trim().compareToIgnoreCase(anotherStr));
+
+        // matches (regex)
+        System.out.println("Matches regex: " + str.matches(".*Java.*"));
+
+        // toCharArray
+        char[] chars = str.toCharArray();
+        System.out.print("ToCharArray: ");
+        for (char ch : chars) {
+            System.out.print(ch + " ");
+        }
+        System.out.println();
+
+        // join (Java 8+)
+        String joined = String.join("-", "Java", "is", "awesome");
+        System.out.println("Joined: " + joined);
+
+        // intern
+        String s1 = new String("interned").intern();
+        String s2 = "interned";
+        System.out.println("Interned equals: " + (s1 == s2));
+
+        // repeat (Java 11+)
+        System.out.println("Repeat: " + "Ha".repeat(3));
+    }
+}
