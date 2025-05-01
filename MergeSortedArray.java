@@ -54,7 +54,7 @@ public static void merge(int [] nums1, int m , int[] nums2 , int n){
                 arr[k++] = nums2[j++];
             }
           }
-    
+    // 
           while( i < m){
             arr[k++] = nums1[i++];
           }
